@@ -1,5 +1,3 @@
 /node_modules
 
-*.sqlite3
-
-/src/database/database.sqlite
+*.sqlite
