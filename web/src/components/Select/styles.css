@@ -22,6 +22,106 @@
   font: 1.6rem Archivo;
 }
 
+.select-block select {
+  width: 100%;
+  height: 5.6rem;
+  margin-top: 0.8rem;
+  border-radius: 0.8rem;
+  background: var(--color-input-background);
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  padding: 0 1.6rem;
+  font: 1.6rem Archivo;
+}
+
+.select-block .select {
+  position: relative;
+}
+
+.select-block .select label {
+  background: var(--color-input-background);
+  width: 100%;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.8rem;
+  padding: 0 1.6rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  padding: 0 1.6rem;
+
+  font: 1.6rem Archivo;
+  color: #000 !important;
+  text-overflow: ellipsis;
+  
+  cursor: pointer;
+}
+
+.select-block .select label:after {
+  content: '\203a';
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  transition: ease-in 0.2s;
+}
+
+.select-block .select input {
+  display: none;
+}
+
+.select-block .select input:checked ~ .options {
+  display: block;
+}
+
+.select-block .select input:checked + label:after {
+  transform: rotate(90deg);
+}
+
+.select-block .select .options {
+  display: none;
+  background-color: var(--color-input-background);
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  z-index: 1001;
+  border-radius: 0 0 0.8rem 0.8rem;
+
+}
+
+.select-block .select .options div {
+  padding: 1.6rem;
+  border: 1px solid var(--color-line-in-white);
+  position: relative;
+  cursor: pointer;
+}
+
+.select-block .select .options div:last-child{
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.select-block .select .options div:after {
+  content: "";
+  position: absolute;
+  display: none;
+  height: 5.6rem;
+  width: 2px;
+  background-color: var(--color-primary-light);
+  left: 0;
+  top: 0;
+}
+
+.select-block .select .options div:hover {
+  padding: 1.6rem;
+  background: var(--color-line-in-white);
+}
+
+.select-block .select .options div:hover::after {
+  display: block;
+}
+
 .select-block:focus-within::after {
   width: calc(100% - 3.2rem);
   height: 2px;
@@ -32,4 +132,3 @@
   right: 1.6rem;
   bottom: 0;
 }
-

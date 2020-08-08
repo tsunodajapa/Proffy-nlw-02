@@ -11,7 +11,7 @@ import api from '../../services/api';
 
 const TeacherList = () => {
     const [subject, setSubject] = useState('');
-    const [week_day, setWeekDay] = useState(0);
+    const [week_day, setWeekDay] = useState('0');
     const [time, setTime] = useState('');
 
     const [teachers, setTeachers] = useState([]);
@@ -38,7 +38,7 @@ const TeacherList = () => {
                         name="subject"
                         label="Matéria"
                         value={subject}
-                        onChange={e => setSubject(e.target.value)}
+                        onChange={value => setSubject(value)}
                         options={[
                             { value: 'Artes', label: 'Artes' },
                             { value: 'Biologia', label: 'Biologia' },
@@ -53,7 +53,7 @@ const TeacherList = () => {
                         name="week_day"
                         label="Dia da semana"
                         value={week_day}
-                        onChange={e => setWeekDay(Number(e.target.value))}
+                        onChange={value => setWeekDay(value)}
                         options={[
                             { value: '0', label: 'Domingo' },
                             { value: '1', label: 'Segunda-feira' },
