@@ -1,7 +1,6 @@
 # Projeto Proffy
 ![npm](https://img.shields.io/npm/v/react?label=react)
 ![npm](https://img.shields.io/npm/v/react-native?label=react-native)
-[![node version](https://img.shields.io/node/v/react-native)](https://img.shields.io/node/v/react-native)
 ![npm](https://img.shields.io/npm/v/react-navigation?label=react-native-navigation)
 
 #### O Proffy conta com uma plataforma web e mobile para seus usuários: professores e alunos. Os professores podem cadastrar os horários disponíveis para ministrar aulas, e os alunos podem ver esses cadastros com filtros e entrar em contato através de um link para o whatsapp.
@@ -12,7 +11,8 @@
 - React-Native >= 6.2
 - React >= 16.13
 - npm >= 6.0.0
-- node >= 10
+- node >= 12.8
+- expo >= 3.23
 
 ## Como utilizar
 
@@ -60,4 +60,21 @@ npm start
 ```
 ### Mobile
 
+#### Acesse o diretório do mobile
+```
+cd mobile
+```
+
+#### Execute o comando para instalações de dependências do mobile:
+> Altere a baseURL em ./src/services/api.ts 
+```
+npm install
+```
+
+#### Com o celular plugado no PC, utilize o comando:
+> É necessário ativar o modo de depuração do celular
+
+```
+npm start
+```
 
